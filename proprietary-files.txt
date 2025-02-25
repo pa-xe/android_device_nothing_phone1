@@ -1110,6 +1110,12 @@ vendor/lib64/libspl.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libtzdrmgenprov.so
 
+# Richtap - from eqs 14-U1SQS34.52-21-1-10 504bf-893e0 release-keys
+vendor/lib64/libaacvibrator.so|a58aac68c3a3a964adfcda9bb948aa7eef089f58
+
+# Richtap config
+odm/etc/aac_richtap.config
+
 # Sensors
 vendor/bin/hw/vendor.noth.hardware.sensor.sensor_extension@1.0-service
 vendor/bin/init.qcom.sensors.sh
@@ -1353,18 +1359,6 @@ vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
-
-# Vibrator
-odm/etc/aac_richtap.config
-vendor/bin/hw/vendor.qti.hardware.vibrator.service
-vendor/etc/init/vendor.qti.hardware.vibrator.service.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml
-vendor/lib/hw/vibrator.default.so
-vendor/lib64/hw/vibrator.default.so
-vendor/lib64/libaacvibrator.so
-vendor/lib64/libqtivibratoreffect.so
-vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
-vendor/lib64/vendor.qti.hardware.vibrator.impl.so
 
 # VPP
 vendor/bin/vppservice
