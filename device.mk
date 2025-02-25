@@ -128,11 +128,6 @@ PRODUCT_PACKAGES += \
    android.hardware.keymaster@4.1 \
    android.hardware.keymaster@4.1.vendor
 
-# Media
-    PRODUCT_PROPERTY_OVERRIDES += \
-        debug.stagefright.ccodec=4 \
-        vendor.media.omx=0
-
 # Manifests
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/manifest_yupik.xml \
