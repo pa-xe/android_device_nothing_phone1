@@ -174,8 +174,7 @@ PRODUCT_PACKAGES += \
     Phone1Nfc \
     Phone1Settings \
     Phone1SystemUI \
-    Phone1SystemUIAOSPA \
-    aptxalsOverlay
+    Phone1SystemUIAOSPA
 
 # Paranoid Glyph
 PRODUCT_PACKAGES += \
