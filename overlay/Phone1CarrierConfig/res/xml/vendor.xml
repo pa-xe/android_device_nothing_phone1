@@ -122,6 +122,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     <boolean name="show_4g_for_lte_data_icon_bool" value="true"/>
     <!-- AOSPA Edit: Enable LTE+ icon globally -->
     <boolean name="hide_lte_plus_data_icon_bool" value="false"/>
+    <!-- AOSPA Edit: Enable inflate signal strength by default -->
+    <boolean name="inflate_signal_strength_bool" value="true" />
   </carrier_config>
   <carrier_config mcc="001" mnc="01">
     <boolean name="carrier_volte_available_bool" value="true"/>
