@@ -55,7 +55,7 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.phone1
 
 # Kernel
-BOARD_KERNEL_BASE := 0x00000000
+BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
@@ -69,10 +69,16 @@ BOARD_KERNEL_CMDLINE := \
     pcie_ports=compat \
     iptable_raw.raw_before_defrag=1 \
     ip6table_raw.raw_before_defrag=1
-BOARD_KERNEL_PAGESIZE    := 4096
+
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
-KERNEL_DEFCONFIG := phone1_defconfig
-KERNEL_FULL_LLVM := true
+TARGET_KERNEL_SOURCE := kernel/nothing/sm7325
+TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/debugfs.config
+TARGET_KERNEL_NO_GCC := true
 
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
